@@ -1,7 +1,7 @@
 <div id="kt_header" style="" class="header align-items-stretch">
   <div class="header-brand">
-    <a href="../../demo8/dist/index.html">
-      <img alt="Logo" src="assets/media/logos/geeka-logo-large.svg" class="h-35px h-lg-50px" />
+    <a href="#">
+      <img alt="Logo" src="{{ asset('assets/media/logos/geeka-logo-large.svg') }}" class="h-35px h-lg-50px" />
     </a>
     <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
       <i class="ki-duotone ki-entrance-right fs-1 me-n1 minimize-default">
@@ -24,19 +24,23 @@
   <div class="toolbar d-flex align-items-stretch">
     <div class="container-xxl py-6 py-lg-0 d-flex flex-column flex-lg-row align-items-lg-stretch justify-content-lg-between">
       <div class="page-title d-flex justify-content-center flex-column me-5">
-        <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Dashboard</h1>
+        <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">{{ $title }}</h1>
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
           <li class="breadcrumb-item text-muted">
-            <a href="../../demo8/dist/index.html" class="text-muted text-hover-primary">Home</a>
+            <i class="ki-duotone ki-home text-gray-400"></i>
           </li>
           <li class="breadcrumb-item">
             <span class="bullet bg-gray-300 w-5px h-2px"></span>
           </li>
-          <li class="breadcrumb-item text-muted">Dashboards</li>
+          @if ($menu)
+          <li class="breadcrumb-item text-muted">
+            <span class="text-muted">{{ $menu }}</span>
+          </li>
           <li class="breadcrumb-item">
             <span class="bullet bg-gray-300 w-5px h-2px"></span>
           </li>
-          <li class="breadcrumb-item text-dark">Default</li>
+          @endif
+          <li class="breadcrumb-item text-dark">{{ $title }}</li>
         </ul>
       </div>
 
@@ -54,7 +58,7 @@
                   </i>
                 </a>
                 <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
-                  <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('assets/media/misc/menu-header-bg.jpg')">
+                  <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{ asset('assets/media/misc/menu-header-bg.jpg') }}')">
                     <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifikasi <br>
                     <span class="fs-8 opacity-75">2 pemberitahuan</span></h3>
                   </div>
@@ -165,13 +169,13 @@
             <div class="d-flex">
               <div class="d-flex align-items-center">
                 <a href="#" class="btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" data-kt-menu-overflow="true">
-                  <img src="assets/media/avatars/300-3.jpg" class="rounded-3 h-35px" alt="user">
+                  <img src="{{ asset('assets/media/avatars/300-3.jpg') }}" class="rounded-3 h-35px" alt="user">
                 </a>
                 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
                   <div class="menu-item px-3">
                     <div class="menu-content d-flex align-items-center px-3">
                         <div class="symbol symbol-50px me-5">
-                            <img alt="Logo" src="assets/media/avatars/300-3.jpg">
+                            <img alt="Logo" src="{{ asset('assets/media/avatars/300-3.jpg') }}">
                         </div>
                         <div class="d-flex flex-column">
                             <div class="fw-bold d-flex align-items-center fs-5">

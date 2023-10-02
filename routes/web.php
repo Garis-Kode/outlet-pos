@@ -14,5 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('dashboard', function () {
-    return view('dashboard');
-});
+    return view('dashboard', [
+        'menu' => null,
+        'title' => 'Dashboard',
+        ]);
+})->name('dashboard'); 
+
+Route::get('katalog/kategori', function () {
+    return view('katalog.kategori', [
+        'menu' => 'katalog',
+        'title' => 'Kategori',
+        ]);
+    })->name('katalog.kategori'); 
+
+Route::get('katalog/produk', function () {
+    return view('katalog.produk', [
+        'menu' => 'katalog',
+        'title' => 'Produk',
+        ]);
+})->name('katalog.produk'); 

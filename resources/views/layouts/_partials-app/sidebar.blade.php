@@ -2,7 +2,7 @@
   <div class="aside-toolbar flex-column-auto" id="kt_aside_toolbar">
     <div class="aside-user d-flex align-items-sm-center justify-content-center py-5">
       <div class="symbol symbol-50px">
-        <img src="assets/media/avatars/300-1.jpg" alt="" />
+        <img src="{{ asset('assets/media/avatars/300-1.jpg') }}" alt="" />
       </div>
       <div class="aside-user-info flex-row-fluid flex-wrap ms-5">
         <div class="d-flex align-items-center">
@@ -22,11 +22,11 @@
             </a>
             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
               <div class="menu-item px-5">
-                <a href="../../demo8/dist/account/overview.html" class="menu-link px-5">Settings</a>
+                <a href="#" class="menu-link px-5">Settings</a>
               </div>
               <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" data-kt-menu-offset="-15px, 0">
                 <a href="#" class="menu-link px-5">
-                  <span class="menu-title">Outletn</span>
+                  <span class="menu-title">Outlet</span>
                   <span class="menu-arrow"></span>
                 </a>
                 <div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -50,8 +50,8 @@
     <div class="hover-scroll-overlay-y px-2 my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="{default: '#kt_aside_toolbar, #kt_aside_footer', lg: '#kt_header, #kt_aside_toolbar, #kt_aside_footer'}" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="5px">
       <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
         
-        <div class="menu-item here show">
-          <a class="menu-link" href="#">
+        <div class="menu-item @if ($title == 'Dashboard') here @endif">
+          <a class="menu-link" href="{{ route('dashboard') }}">
             <span class="menu-icon">
               <i class="ki-duotone ki-element-11 fs-2">
                 <span class="path1"></span>
@@ -70,7 +70,7 @@
           </div>
         </div>
         
-        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion @if ($menu == 'katalog') here show @endif">
           <span class="menu-link">
             <span class="menu-icon">
               <i class="ki-duotone ki-basket fs-2">
@@ -84,16 +84,16 @@
             <span class="menu-arrow"></span>
           </span>
           <div class="menu-sub menu-sub-accordion">
-            <div class="menu-item">
-              <a class="menu-link" href="#">
+            <div class="menu-item  @if ($title == 'Kategori') here @endif">
+              <a class="menu-link" href="{{ route('katalog.kategori') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
                 <span class="menu-title">Kategori</span>
               </a>
             </div>
-            <div class="menu-item">
-              <a class="menu-link" href="#">
+            <div class="menu-item  @if ($title == 'Produk') here @endif">
+              <a class="menu-link" href="{{ route('katalog.produk') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
@@ -124,8 +124,6 @@
                 <span class="menu-title">Laporan Transaksi</span>
               </a>
             </div>
-          </div>
-          <div class="menu-sub menu-sub-accordion menu-active-bg">
             <div class="menu-item">
               <a class="menu-link" href="#">
                 <span class="menu-bullet">
@@ -134,8 +132,6 @@
                 <span class="menu-title">Laporan Pemasukan</span>
               </a>
             </div>
-          </div>
-          <div class="menu-sub menu-sub-accordion menu-active-bg">
             <div class="menu-item">
               <a class="menu-link" href="#">
                 <span class="menu-bullet">
@@ -144,8 +140,6 @@
                 <span class="menu-title">Laporan Per-Kategori</span>
               </a>
             </div>
-          </div>
-          <div class="menu-sub menu-sub-accordion menu-active-bg">
             <div class="menu-item">
               <a class="menu-link" href="#">
                 <span class="menu-bullet">
@@ -156,7 +150,6 @@
             </div>
           </div>
         </div>
-        
         <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
           <span class="menu-link">
             <span class="menu-icon">
@@ -287,7 +280,7 @@
                 <span class="path2"></span>
               </i>
             </span>
-            <span class="menu-title">Settings</span>
+            <span class="menu-title">Pengaturan</span>
           </a>
         </div>
 
