@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
-            <a href="#" class="btn btn-primary">Tambah Produk</a>
+            <a href="{{ route('katalog.produk.tambah') }}" class="btn btn-primary">Tambah Produk</a>
           </div>
         </div>
         <div class="card-body pt-0">
@@ -24,10 +24,11 @@
             <thead>
               <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                 <th class="min-w-200px">Product</th>
-                <th class="text-end min-w-70px">Modal</th>
+                <th class="text-center min-w-100px">Kategori</th>
+                <th class="text-end min-w-100px">Modal</th>
                 <th class="text-end min-w-100px">Harga</th>
                 <th class="text-end min-w-100px">Status</th>
-                <th class="text-end min-w-70px">Actions</th>
+                <th class="text-end min-w-70px">Aksi</th>
               </tr>
             </thead>
             <tbody class="fw-semibold text-gray-600">
@@ -43,15 +44,18 @@
                     </div>
                   </div>
                 </td>
-                <td class="text-end pe-0">
+                <td class="text-center">
+                  <span class="fw-bold ms-3">Drink</span>
+                </td>
+                <td class="text-end">
                   <span class="fw-bold ms-3">Rp. 20.000</span>
                 </td>
-                <td class="text-end pe-0">Rp. 25.000</td>
-                <td class="text-end pe-0">
+                <td class="text-end">Rp. 25.000</td>
+                <td class="text-end">
                   <div class="badge badge-light-primary">Scheduled</div>
                 </td>
                 <td class="text-end">
-                  <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                  <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Aksi
                   <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
                   <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                     <div class="menu-item px-3">
@@ -69,5 +73,9 @@
       </div>
     </div>
   </div>
+
+@endsection
+
+@section('script')
 
 @endsection

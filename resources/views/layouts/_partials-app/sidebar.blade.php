@@ -137,6 +137,14 @@
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
+                <span class="menu-title">Laporan Laba</span>
+              </a>
+            </div>
+            <div class="menu-item">
+              <a class="menu-link" href="#">
+                <span class="menu-bullet">
+                  <span class="bullet bullet-dot"></span>
+                </span>
                 <span class="menu-title">Laporan Per-Kategori</span>
               </a>
             </div>
@@ -192,9 +200,9 @@
         <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
           <span class="menu-link">
             <span class="menu-icon">
-              <i class="ki-duotone ki-credit-cart fs-2">
-                <span class="path1"></span>
-                <span class="path2"></span>
+              <i class="ki-duotone ki-discount fs-2">
+                <i class="path1"></i>
+                <i class="path2"></i>
               </i>
             </span>
             <span class="menu-title">Promo</span>
@@ -263,9 +271,7 @@
         <div class="menu-item">
           <a class="menu-link" href="#">
             <span class="menu-icon">
-              <i class="ki-duotone ki-chart fs-2">
-                <span class="path1"></span>
-                <span class="path2"></span>
+              <i class="ki-duotone ki-star fs-2">
               </i>
             </span>
             <span class="menu-title">Review</span>
