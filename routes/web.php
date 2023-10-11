@@ -20,30 +20,43 @@ Route::get('dashboard', function () {
         ]);
 })->name('dashboard'); 
 
-Route::get('katalog/kategori', function () {
-    return view('katalog.kategori', [
-        'menu' => 'katalog',
-        'title' => 'Kategori',
-        ]);
-    })->name('katalog.kategori'); 
+Route::prefix('/katalog')->group(function () {
+    Route::get('/kategori', function () {
+        return view('katalog.kategori', [
+            'menu' => 'Katalog',
+            'title' => 'Kategori',
+            ]);
+        })->name('katalog.kategori'); 
+    
+    Route::get('/kategori/tambah', function () {
+        return view('katalog.tambah-kategori', [
+            'menu' => 'Katalog',
+            'title' => 'Tambah Kategori',
+            ]);
+        })->name('katalog.kategori.tambah'); 
+    
+    Route::get('/produk', function () {
+        return view('katalog.produk', [
+            'menu' => 'Katalog',
+            'title' => 'Produk',
+            ]);
+        })->name('katalog.produk'); 
+    
+    Route::get('/produk/tambah', function () {
+        return view('katalog.tambah-produk', [
+            'menu' => 'Katalog',
+            'title' => 'Tambah Produk',
+            ]);
+        })->name('katalog.produk.tambah'); 
+});
 
-Route::get('katalog/kategori/tambah', function () {
-    return view('katalog.tambah-kategori', [
-        'menu' => 'katalog',
-        'title' => 'Tambah Kategori',
-        ]);
-    })->name('katalog.kategori.tambah'); 
+Route::prefix('/akuntansi')->group(function () {
+    Route::get('/rekening', function () {
+        return view('akuntansi.rekening', [
+            'menu' => 'Akuntansi',
+            'title' => 'Rekening',
+            ]);
+        })->name('akuntansi.rekening'); 
+});
 
-Route::get('katalog/produk', function () {
-    return view('katalog.produk', [
-        'menu' => 'katalog',
-        'title' => 'Produk',
-        ]);
-    })->name('katalog.produk'); 
 
-Route::get('katalog/produk/tambah', function () {
-    return view('katalog.tambah-produk', [
-        'menu' => 'katalog',
-        'title' => 'Tambah Produk',
-        ]);
-    })->name('katalog.produk.tambah'); 

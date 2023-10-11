@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
-            <a href="{{ route('katalog.produk.tambah') }}" class="btn btn-primary">Tambah Produk</a>
+            <a href="{{ route('katalog.produk.tambah') }}" class="btn btn-primary btn-sm">Tambah Produk</a>
           </div>
         </div>
         <div class="card-body pt-0">

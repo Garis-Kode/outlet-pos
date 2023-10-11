@@ -5,7 +5,7 @@
   <div class="row g-5 g-xl-8">
     <div class="col-xl-12 mb-8">
       <div class="d-md-flex flex-row-fluid justify-content-end gap-5">
-        <input class="form-control shadow border-0 w-100 mw-250px" placeholder="Pick date range" id="kt_daterangepicker_1" />
+        <input type="month" class="form-control shadow border-0 w-100 mw-250px" value="{{ now()->format('Y-m') }}" />
       </div>
     </div>
   </div>
@@ -119,7 +119,7 @@
       <div class="card card-xl-stretch mb-xl-8">
         <div class="card-header border-0 pt-5">
           <h3 class="card-title align-items-start flex-column">
-            <span class="card-label fw-bold text-dark">Produk Terlaris</span>
+            <span class="card-label fw-bold text-dark">Jenis Transaksi</span>
             <span class="text-muted fw-semibold fs-7">Maret 2023</span>
           </h3>
         </div>

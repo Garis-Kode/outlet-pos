@@ -70,7 +70,7 @@
           </div>
         </div>
         
-        <div data-kt-menu-trigger="click" class="menu-item menu-accordion @if ($menu == 'katalog') here show @endif">
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion @if ($menu == 'Katalog') here show @endif">
           <span class="menu-link">
             <span class="menu-icon">
               <i class="ki-duotone ki-basket fs-2">
@@ -158,7 +158,7 @@
             </div>
           </div>
         </div>
-        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion @if ($menu == 'Akuntansi') here show @endif">
           <span class="menu-link">
             <span class="menu-icon">
               <i class="ki-duotone ki-bank fs-2">
@@ -170,6 +170,14 @@
             <span class="menu-arrow"></span>
           </span>
           <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item  @if ($title == 'Rekening') here @endif">
+              <a class="menu-link" href="{{ route('akuntansi.rekening') }}">
+                <span class="menu-bullet">
+                  <span class="bullet bullet-dot"></span>
+                </span>
+                <span class="menu-title">Rekening</span>
+              </a>
+            </div>
             <div class="menu-item">
               <a class="menu-link" href="#">
                 <span class="menu-bullet">
@@ -184,14 +192,6 @@
                   <span class="bullet bullet-dot"></span>
                 </span>
                 <span class="menu-title">Uang Keluar</span>
-              </a>
-            </div>
-            <div class="menu-item">
-              <a class="menu-link" href="#">
-                <span class="menu-bullet">
-                  <span class="bullet bullet-dot"></span>
-                </span>
-                <span class="menu-title">Laba</span>
               </a>
             </div>
           </div>
