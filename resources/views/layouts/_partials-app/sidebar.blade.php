@@ -178,15 +178,15 @@
                 <span class="menu-title">Rekening</span>
               </a>
             </div>
-            <div class="menu-item">
-              <a class="menu-link" href="#">
+            <div class="menu-item @if ($title == 'Uang Masuk') here @endif">
+              <a class="menu-link" href="{{ route('akuntansi.uang_masuk') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
                 <span class="menu-title">Uang Masuk</span>
               </a>
             </div>
-            <div class="menu-item">
+            <div class="menu-item @if ($title == 'Uang Keluar') here @endif">
               <a class="menu-link" href="#">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>

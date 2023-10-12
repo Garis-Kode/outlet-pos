@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="card-toolbar">
-            <a href="{{ route('katalog.kategori.tambah') }}" class="btn btn-primary btn-sm">Tambah Kategori</a>
+            <a href="{{ route('katalog.kategori.add') }}" class="btn btn-primary">Tambah Kategori</a>
           </div>
         </div>
         <div class="card-body pt-0">
