@@ -16,7 +16,9 @@
             </div>
           </div>
           <div class="card-toolbar">
-            <a href="{{ route('akuntansi.rekening.add') }}" class="btn btn-primary">Tambah Rekening</a>
+            <a href="{{ route('akuntansi.rekening.add') }}" class="btn btn-primary d-flex align-items-center"><i class="ki-duotone ki-plus fs-2"></i>
+              Tambah
+            </a>
           </div>
         </div>
         <div class="card-body pt-0">
@@ -35,8 +37,12 @@
                 <td>123456789</td>
                 <td>Fajar Rivaldi Chan</td>
                 <td class="text-end">
-                  <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Aksi
-                  <i class="ki-duotone ki-down fs-5 ms-1"></i>
+                  <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center btn-icon" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                    <i class="ki-duotone ki-dots-horizontal fw-bold  fs-1">
+                      <span class="path1"></span>
+                      <span class="path2"></span>
+                      <span class="path3"></span>
+                    </i>
                   </a>
                   <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                     <div class="menu-item px-3">
